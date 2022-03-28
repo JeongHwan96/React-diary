@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+<p align="center">
+  <h1 align="center">React를 사용하여 다이어리 만들기!(진행중) ✨</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+리액트를 사용하여 다이어리를 제작중에 있습니다! <br/현재까지 진행 중인 작업물은 <a href="https://jeonghwan96.github.io/React-shoppingmall/">여기서</a>에서 확인하실 수 있습니다.
+  <br/>
+  <br/> 
+  아직 내용 추가와 수정이 진행중 입니다!😊 변경되는대로 바로바로 올리겠습니다! <br/>
+  아직 부족한점이 많지만 최대한 기능을 구현 하고 디자인에 신경을 쓰겠습니다!!😀
+  <br/>
+  <br/>
+  🛠  Technical Skills 
+  <br/>
+  <br/>
+    <img src="https://img.shields.io/badge/-React-0088CC?style=flat&logo=React"/>
+     <img src="https://img.shields.io/badge/-Sass-CC2277?style=flat&logo=Sass"/>
+    <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6"/>
+    <img src="https://img.shields.io/badge/-Bootstrap-46178F?style=flat&logo=Bootstrap"/>
+    <img src="https://img.shields.io/badge/-Gatsby-663399?style=flat&logo=Gatsby"/>
+  <br/>
+  <br/>
+  <img src="https://user-images.githubusercontent.com/76175940/159107849-6f9503b1-302c-4868-a723-cf99f1461cc5.gif">
+</p>
 
-## Available Scripts
+## Project Introduction ❤️
 
-In the project directory, you can run:
+- React 연습을 위해 진행한 프로젝트입니다
+- 조금씩 조금씩 BootStrap,Gatsby를 사용해서 꾸미고 있어요!😀
+- 아직 미완성이라 어색하지만 조금씩 완성되는 모습을 보여드릴께요🔥
+- 감사합니다~❤️❤️
 
-### `npm start`
+## Simple Description ✨
+<img src ="https://user-images.githubusercontent.com/76175940/159110570-98d4979d-45c5-4bd1-bb3e-ebc0df1e7d05.png" width="400" height="400"/>
+- 메인 화면에 상품 List는 PostMan에서 상품전체의 임시 데이터를 만들고 axios 사용해서 호출했습니다
+<br /><br />
+<img src="https://user-images.githubusercontent.com/76175940/159110691-922689c3-c4b8-4403-972e-5c304076efa5.png" width="400" height="400" />
+- 상품 상세 페이지는 PostMan에서 각각의 상품데이터를 만들고 ID값을 받아서 해당 상품만 보이게 만들었습니다
+<br /><br />
+<img src="https://user-images.githubusercontent.com/76175940/159110876-436f557c-e814-452a-926c-5bb08c02dfe7.png" width="600" height="300" />
+- 장바구니 부분은 SesstionStorage를 사용해서 상품 이미지, 상품 이름, 수량, 수량에 맞는 가격을 불러왔습니다
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Develop History 📜
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2022-02-15
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 메인 화면 구상 및 구현
