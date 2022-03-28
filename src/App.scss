@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&family=Roboto:ital,wght@1,400;1,700&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Pen Script";
+  height: 100vh;
+}
+
+#root {
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .App {
+    min-height: 100vh;
+    padding: 0 20px 0 20px;
+    // 버튼 스타일
+    .Button {
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      padding: 2% 5% 2% 5%;
+      font-size: 18px;
+      white-space: nowrap;
+      font-family: "Nanum Pen Script";
+    }
+    .Button_nagative {
+      background: #fd565f;
+    }
+    .Button_positive {
+      background-color: #64c964;
+    }
+    // 헤더 스타일
+    header {
+      padding: 20px 0 20px 0;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e2e2e2;
+      button {
+        font-family: "Nanum Pen Script";
+      }
+      div {
+        display: flex;
+      }
+      .head_text {
+        width: 50%;
+        font-size: 25px;
+        justify-content: center;
+      }
+      .head_btn_left {
+        width: 25%;
+        justify-content: start;
+      }
+      .head_btn_right {
+        width: 25%;
+        justify-content: end;
+      }
+    }
+    .DiaryList {
+      .menu_wrapper {
+        display: flex;
+        margin: 20px 0 30px 0;
+        justify-content: space-between;
+        .left_col {
+          .ControlMenu {
+            font-family: "Nanum Pen Script";
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            padding: 10px;
+            background-color: #ececec;
+            cursor: pointer;
+          }
+        }
+        .right_col {
+          flex-grow: 1;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .DiaryItem {
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid #e2e2e2;
+      display: flex;
+      justify-content: space-between;
+      .emotion_img_wrapper {
+        cursor: pointer;
+        width: 10%;
+        img {
+          width: 100%;
+        }
+      }
+      .info_wrapper {
+        width: 100%;
+        margin: 0 0 0 5%;
+        cursor: pointer;
+        .diary_date {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .diray_content_preview {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+}

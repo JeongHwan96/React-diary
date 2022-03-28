@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&family=Roboto:ital,wght@1,400;1,700&family=Yeon+Sung&display=swap");
+body { background-color: #f6f6f6; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-family: "Nanum Pen Script"; height: 100vh; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+#root { background-color: #fff; -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#root .App { min-height: 100vh; padding: 0 20px 0 20px; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+#root .App .Button { cursor: pointer; border: none; border-radius: 4px; padding: 2% 5% 2% 5%; font-size: 18px; white-space: nowrap; font-family: "Nanum Pen Script"; }
 
-.App-link {
-  color: #61dafb;
-}
+#root .App .Button_nagative { background: #fd565f; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+#root .App .Button_positive { background-color: #64c964; }
+
+#root .App header { padding: 20px 0 20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #e2e2e2; }
+
+#root .App header button { font-family: "Nanum Pen Script"; }
+
+#root .App header div { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#root .App header .head_text { width: 50%; font-size: 25px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+#root .App header .head_btn_left { width: 25%; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; }
+
+#root .App header .head_btn_right { width: 25%; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; }
+
+#root .App .DiaryList .menu_wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 20px 0 30px 0; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+#root .App .DiaryList .menu_wrapper .left_col .ControlMenu { font-family: "Nanum Pen Script"; font-size: 1.1rem; border: none; border-radius: 4px; margin-right: 10px; padding: 10px; background-color: #ececec; cursor: pointer; }
+
+#root .App .DiaryList .menu_wrapper .right_col { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+
+#root .App .DiaryList .menu_wrapper .right_col button { width: 100%; }
+
+#root .App .DiaryItem { padding: 15px 0 15px 0; border-bottom: 1px solid #e2e2e2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+#root .App .DiaryItem .emotion_img_wrapper { cursor: pointer; width: 10%; }
+
+#root .App .DiaryItem .emotion_img_wrapper img { width: 100%; }
+
+#root .App .DiaryItem .info_wrapper { width: 100%; margin: 0 0 0 5%; cursor: pointer; }
+
+#root .App .DiaryItem .info_wrapper .diary_date { font-size: 2rem; font-weight: 700; }
+
+#root .App .DiaryItem .info_wrapper .diray_content_preview { font-size: 1.4rem; }
+
+@media (min-width: 650px) { .App { width: 640px; } }
+
+@media (max-width: 650px) { .App { width: 90vw; } }
