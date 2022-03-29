@@ -1,12 +1,33 @@
-import React from "react";
-import { useSearchParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { DiaryStateContext } from "./../App";
+import DiaryEditor from "./../components/DiaryEditor";
 
 const Edit = () => {
-  const [searchParam, setSearchParams] = useSearchParams();
-  const id = searchParam.get("id");
-  console.log("id : ", id);
+  const [originData, setOriginData] = useState();
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const diaryList = useContext(DiaryStateContext);
 
-  return <div>Edit</div>;
+  useEffect(() => {
+    if (diaryList.length >= 1) {
+      const targetDiary = diaryList.find(
+        (it) => parseInt(it.id) === parseInt(id)
+      );
+      if (targetDiary) {
+        setOriginData(targetDiary);
+      } else {
+        navigate("/", { replace: true });
+      }
+    }
+  }, [id, diaryList]);
+
+  return (
+    <div>
+      {originData && <DiaryEditor isEdit={true} originData={originData} />}
+    </div>
+  );
 };
 
 export default Edit;

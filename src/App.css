@@ -43,6 +43,34 @@ body { background-color: #f6f6f6; display: -webkit-box; display: -ms-flexbox; di
 
 #root .App .DiaryItem .info_wrapper .diray_content_preview { font-size: 1.4rem; }
 
+#root .App .reviewHeader section { margin-bottom: 10%; }
+
+#root .App .reviewHeader section h4 { font-weight: bold; font-size: 1.7rem; }
+
+#root .App .reviewHeader section .date_Check input { cursor: pointer; border: none; border-radius: 4px; background-color: #ececec; padding: 2%; font-family: "Nanum Pen Script"; font-size: 1.2rem; }
+
+#root .App .reviewHeader section .emotion_Check { border-radius: 4px; display: -ms-grid; display: grid; -ms-grid-columns: (auto)[5]; grid-template-columns: repeat(5, auto); }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem { padding: 20px 0 20px 0; background-color: #ececec; cursor: pointer; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem img { width: 50%; margin-bottom: 5%; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem span { font-size: 1.5rem; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem1 { background-color: #fd565f; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem2 { background-color: #fd8446; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem3 { background-color: #fdce17; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem4 { background-color: #9dd772; }
+
+#root .App .reviewHeader section .emotion_Check .EmotionItem5 { background-color: #64c964; }
+
+#root .App .reviewHeader section textarea { padding: 2%; resize: none; width: 100%; min-height: 150px; border: none; border-radius: 5px; background-color: #ececec; font-size: 1.2rem; font-weight: bold; font-family: "Nanum Pen Script"; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#root .App .reviewHeader .CC_Button { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
 @media (min-width: 650px) { .App { width: 640px; } }
 
 @media (max-width: 650px) { .App { width: 90vw; } }

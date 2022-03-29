@@ -107,6 +107,82 @@ body {
         }
       }
     }
+    // 새 리뷰쓰기
+    .reviewHeader {
+      section {
+        margin-bottom: 10%;
+        h4 {
+          font-weight: bold;
+          font-size: 1.7rem;
+        }
+        .date_Check {
+          input {
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #ececec;
+            padding: 2%;
+            font-family: "Nanum Pen Script";
+            font-size: 1.2rem;
+          }
+        }
+        .emotion_Check {
+          border-radius: 4px;
+          display: grid;
+          grid-template-columns: repeat(5, auto);
+          .EmotionItem {
+            padding: 20px 0 20px 0;
+            background-color: #ececec;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 50%;
+              margin-bottom: 5%;
+            }
+            span {
+              font-size: 1.5rem;
+            }
+          }
+          .EmotionItem1 {
+            background-color: #fd565f;
+          }
+          .EmotionItem2 {
+            background-color: #fd8446;
+          }
+          .EmotionItem3 {
+            background-color: #fdce17;
+          }
+          .EmotionItem4 {
+            background-color: #9dd772;
+          }
+          .EmotionItem5 {
+            background-color: #64c964;
+          }
+        }
+        textarea {
+          padding: 2%;
+          resize: none;
+          width: 100%;
+          min-height: 150px;
+          border: none;
+          border-radius: 5px;
+          background-color: #ececec;
+          font-size: 1.2rem;
+          font-weight: bold;
+          font-family: "Nanum Pen Script";
+          box-sizing: border-box;
+        }
+      }
+      .CC_Button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
   }
 }
 
