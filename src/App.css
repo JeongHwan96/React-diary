@@ -71,6 +71,16 @@ body { background-color: #f6f6f6; display: -webkit-box; display: -ms-flexbox; di
 
 #root .App .reviewHeader .CC_Button { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
+#root .App .detail_emotion { text-align: center; }
+
+#root .App .detail_emotion h4, #root .App .detail_emotion div { font-size: 2rem; }
+
+#root .App .detail_content { margin-top: 20%; text-align: center; }
+
+#root .App .detail_content h4, #root .App .detail_content div { font-size: 2rem; }
+
+#root .App .detail_content div { padding: 5%; background-color: #ececec; border-radius: 5px; word-break: keep-all; overflow-wrap: break-word; line-height: 2.5; }
+
 @media (min-width: 650px) { .App { width: 640px; } }
 
 @media (max-width: 650px) { .App { width: 90vw; } }

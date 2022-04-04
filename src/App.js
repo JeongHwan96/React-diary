@@ -9,77 +9,53 @@ import "./App.css";
 //COMPONENTS
 import Button from "./components/Button";
 import MyHeader from "./components/MyHeader";
-import React, { useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef } from "react";
 import { getActiveElement } from "@testing-library/user-event/dist/utils";
+import DiaryList from "./components/DiaryList";
+
+const reducer = (state, action) => {
+  let newState = [];
+  switch (action.type) {
+    case "INIT": {
+      return action.data;
+    }
+    case "CREATE": {
+      newState = [action.data, ...state];
+      break;
+    }
+    case "REMOVE": {
+      newState = state.filter((it) => it.id !== action.targetId);
+      break;
+    }
+    case "EDIT": {
+      newState = state.map((it) =>
+        it.id === action.data.id ? { ...action.data } : it
+      );
+      break;
+    }
+    default:
+      return state;
+  }
+  localStorage.setItem("diary", JSON.stringify(newState));
+  return newState;
+};
 
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
-const dummyData = [
-  {
-    id: 1,
-    emotion: 1,
-    content: "오늘의 일기 1번",
-    date: 1648224749144,
-  },
-  {
-    id: 2,
-    emotion: 2,
-    content: "오늘의 일기 2번",
-    date: 1648224749145,
-  },
-  {
-    id: 3,
-    emotion: 3,
-    content: "오늘의 일기 3번",
-    date: 1648224749146,
-  },
-  {
-    id: 4,
-    emotion: 4,
-    content: "오늘의 일기 4번",
-    date: 1648224749147,
-  },
-  {
-    id: 5,
-    emotion: 2,
-    content: "오늘의 일기 6번",
-    date: 1748224749147,
-  },
-];
 function App() {
-  const reducer = (state, action) => {
-    let newState = [];
-    switch (action.type) {
-      case "INIT": {
-        return action.data;
-      }
-      case "CREATE": {
-        const newItem = {
-          ...action.data,
-        };
-        newState = [newItem, ...state];
-        break;
-      }
-      case "REMOVE": {
-        newState = state.fliter((it) => it.id !== action.targetId);
-        break;
-      }
-      case "EDIT": {
-        newState = state.map((it) =>
-          it.id === action.data.id ? { ...action.data } : it
-        );
-        break;
-      }
-      default:
-        return state;
+  const [data, dispatch] = useReducer(reducer, []);
+  useEffect(() => {
+    const localData = localStorage.getItem("diary");
+    if (localData) {
+      const DiaryList = JSON.parse(localData).sort(
+        (a, b) => parseInt(b.id) - parseInt(a.id)
+      );
+      dataId.current = parseInt(DiaryList[0].id) + 1;
+
+      dispatch({ type: "INIT", data: DiaryList });
     }
-    return newState;
-  };
-
-  const [data, dispatch] = useReducer(reducer, dummyData);
-  console.log(new Date().getTime());
-
+  });
   const dataId = useRef(0);
 
   const onCreate = (date, content, emotion) => {
@@ -92,6 +68,7 @@ function App() {
         emotion,
       },
     });
+    dataId.current += 1;
   };
   const onRemove = (targetId) => {
     dispatch({ type: "REMOVE", targetId });

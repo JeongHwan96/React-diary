@@ -183,6 +183,31 @@ body {
         align-items: center;
       }
     }
+
+    // 다이어리 상세보기
+    .detail_emotion {
+      text-align: center;
+      h4,
+      div {
+        font-size: 2rem;
+      }
+    }
+    .detail_content {
+      margin-top: 20%;
+      text-align: center;
+      h4,
+      div {
+        font-size: 2rem;
+      }
+      div {
+        padding: 5%;
+        background-color: #ececec;
+        border-radius: 5px;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        line-height: 2.5;
+      }
+    }
   }
 }
 
